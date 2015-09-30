@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>hover-intent</title>
+        <style>
+        	ul {
+		  padding:0;
+		}
+		li {
+		  list-style:none;
+		  padding:10px 0;
+		  background:red;
+		  margin:4px 0;
+		  -webkit-transition:0.1s all;
+		  transition:0.1s all;
+		}
+	
+		li.hi-hover {
+		  background:lightblue;
+		}
+		
+		li.hi-intent {
+		  background:lightgreen;
+		  height:200px;
+		}
+		
+		li.hi-hover.hi-intent {
+		  background:yellow;
+		}
+
+        </style>
+    </head>
+    <body>
+    	<ul>
+    	    <li>Alpha</li>
+    	    <li>Beta</li>
+    	    <li>Gamma</li>
+    	    <li>Delta</li>
+    	</ul>
+    	<script src="hover-intent.js"></script>
+    </body>
+</html>
