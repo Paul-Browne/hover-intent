@@ -6,40 +6,111 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>hover-intent</title>
         <style>
-        	ul {
-		  padding:0;
-		}
-		li {
-		  list-style:none;
-		  padding:10px 0;
-		  background:red;
-		  margin:4px 0;
-		  -webkit-transition:0.1s all;
-		  transition:0.1s all;
-		}
-	
-		li.hi-hover {
-		  background:lightblue;
-		}
-		
-		li.hi-intent {
-		  background:lightgreen;
-		  height:200px;
-		}
-		
-		li.hi-hover.hi-intent {
-		  background:yellow;
-		}
+			/* function */
+			
+			nav {
+			    display: block;
+			    margin: 20px 0;
+			}
+			
+			nav > ul {
+			    display: inline-block;
+			    margin: 0 auto;
+			    vertical-align: middle;
+			}
+			
+			nav ul {
+				list-style-type: none;
+				padding:0;
+				margin-bottom:0;
+			}
+			
+			nav ul ul {
+			    display: none;
+			}
+			
+			nav > ul > li {
+			    float: left;
+			}
+			
+			nav a {
+			    margin:0 10px;
+			    line-height:33px;
+			}
+			
+			nav > ul > li.hi-hover > ul {
+			    display: block;
+			    position: absolute;
+			}
+			
+			nav > ul > li > ul > li.hi-hover > ul {
+			    display: block;
+			    position: relative;
+			}
+			
+			
+			/* style */
+			
+			nav li:hover {
+			    background: #37f;
+			}
+			
+			nav ul li:hover > a {
+			    color: #fff;
+			}
+			
+			nav li li {
+			    text-align: left;
+			}
+			
+			nav ul ul {
+			    background: #fff;
+			    z-index: 5;
+			}
 
         </style>
     </head>
     <body>
-    	<ul>
-    	    <li>Alpha</li>
-    	    <li>Beta</li>
-    	    <li>Gamma</li>
-    	    <li>Delta</li>
-    	</ul>
+    	<nav>
+	    	<ul>
+	    	    <li><a>Electronics</a>
+			    	<ul>
+			    	    <li><a>Phones</a>
+					    	<ul>
+					    	    <li><a>Smartphones</a></li>
+					    	    <li><a>Landlines</a></li>
+					    	</ul>
+			    	    </li>
+			    	    <li><a>Televisions</a>
+					    	<ul>
+					    	    <li><a>Plasma</a></li>
+					    	    <li><a>LCD</a></li>
+					    	    <li><a>3D</a></li>
+					    	</ul>
+			    	    </li>
+			    	    <li><a>Kitchen</a>
+					    	<ul>
+					    	    <li><a>Cookers</a></li>
+					    	    <li><a>Fridges</a></li>
+					    	    <li><a>Microwaves</a></li>
+					    	    <li><a>Toasters</a></li>
+					    	    <li><a>Blenders</a></li>
+					    	</ul>
+			    	    </li>
+			    	</ul>
+	    	    </li>
+	    	    <li><a>Fashion</a>
+			    	<ul>
+			    	    <li><a>Mens</a></li>
+			    	    <li><a>Womans</a></li>
+			    	    <li><a>Childrens</a></li>
+			    	    <li><a>Babies</a></li>
+			    	</ul>
+	    	    </li>
+	    	    <li><a>Food</a></li>
+	    	    <li><a>Automotive</a></li>
+	    	</ul>
+    	</nav>
     	<script src="hover-intent.js"></script>
     </body>
 </html>
