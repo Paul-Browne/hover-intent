@@ -43,7 +43,7 @@
       
       this.className += " hi-hover";
         stillMouse(function() {
-          if(b.className.match(/(?:^|\s)hi-hover(?!\S)/) && !b.className.match(/(?:^|\s)hi-intent(?!\S)/)){
+          if(/*b.className.match(/(?:^|\s)hi-hover(?!\S)/) && */!b.className.match(/(?:^|\s)hi-intent(?!\S)/)){
             b.className += " hi-intent";
           }
         });
