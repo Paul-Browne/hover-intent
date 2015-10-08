@@ -3,6 +3,6 @@ Hover-intent will add the class `.hi-intent` when the user's mouse hovers over a
 
 Practically meaning that the user's mouse can leave a list item, then return, without the class `.hi-intent` being removed, just so long as the mouse is not stationary for greater than 0.25 seconds before returning. Useful for nested dropdown menus.
 
-Also the class `.hi-hover` will be added when the mouse hovers over the list item
+Also the class `.hi-hover` will be added immediately when the mouse hovers over the list item, and immediately removed when the mouse leaves.
 
 less than 400 bytes when minified and compressed
