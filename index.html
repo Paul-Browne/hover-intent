@@ -11,6 +11,7 @@
 			nav {
 			    display: block;
 			    margin: 20px 0;
+                white-space: nowrap;
 			}
 			
 			nav > ul {
@@ -18,6 +19,10 @@
 			    margin: 0 auto;
 			    vertical-align: middle;
 			}
+            
+            nav li {
+                //position: relative;
+            }
 			
 			nav ul {
 				list-style-type: none;
@@ -27,36 +32,62 @@
 			
 			nav ul ul {
 			    display: none;
+                position: static;
 			}
 			
 			nav > ul > li {
 			    float: left;
 			}
 			
-			nav a {
+			nav a,
+            nav span{
 			    margin:0 10px;
 			    line-height:33px;
+                //color:black;
 			}
 			
-			nav > ul > li.hi-intent > ul {
+			.no-touch nav > ul > li.hi-intent > ul,
+            .touch nav > ul > li.active > ul{
 			    display: block;
 			    position: absolute;
 			}
 			
-			nav > ul > li > ul > li.hi-intent > ul {
+			.no-touch nav > ul > li > ul > li.hi-intent > ul,
+            .touch nav > ul > li > ul > li.active > ul{
 			    display: block;
-			    position: relative;
+			    position: absolute;
+                left: 100%;
+                margin-top: -33px;
 			}
+            
+            .touch nav > ul > li > ul > li > ul > li.active > ul,
+            .no-touch nav > ul > li > ul > li > ul > li.active > ul {
+                position: absolute;
+                display: block;
+                
+            }
 			
-			
+            .no-touch nav > ul > li > ul > li > ul > li.inactive > span.more:after {
+                content: "+++";
+            }
+            
+            .no-touch nav > ul > li > ul > li > ul > li.active > span.more:after {
+                content: "----ll--";
+            }            
+
+            
 			/* style */
+            
+            nav li.inactive {
+                //color:black;
+            }
 			
-			nav li:hover {
-			    background: #37f;
+			nav li.hi-hover {
+			    //background: #37f;
 			}
 			
-			nav ul li:hover > a {
-			    color: #fff;
+			nav ul li.hi-hover > a {
+			    //color: #fff;
 			}
 			
 			nav li li {
@@ -65,8 +96,22 @@
 			
 			nav ul ul {
 			    background: #fff;
-			    z-index: 5;
+			    //z-index: 5;
 			}
+            
+            nav span.more {
+                background: yellow;   
+            }
+            
+            .touch nav li.inactive > span.more:after {
+                content: "+++";
+            }
+            
+            .touch nav li.active > span.more:after {
+                content: "-ffsdfdf--";
+            }
+
+            
 
         </style>
     </head>
@@ -81,18 +126,26 @@
 					    	    <li><a>Landlines</a></li>
 					    	</ul>
 			    	    </li>
-			    	    <li><a>Televisions</a>
+			    	    <li><span>Televisions</span>
 					    	<ul>
 					    	    <li><a>Plasma</a></li>
 					    	    <li><a>LCD</a></li>
 					    	    <li><a>3D</a></li>
 					    	</ul>
 			    	    </li>
-			    	    <li><a>Kitchen</a>
+			    	    <li><a>Kitchen and bathroom</a>
 				    	<ul>
-				    	    <li><a>Cookers</a></li>
-				    	    <li><a>Fridges</a></li>
-				    	    <li><a>Microwaves</a></li>
+				    	    <li><a>Co okers</a></li>
+				    	    <li><a>FridgeFr eezerszzz zzzzzzzzzzzzz</a></li>
+				    	    <li><a>Microwaves</a>
+                                <ul>
+                                    <li><a>Samsung</a></li>
+                                    <li><a>Philips</a></li>
+                                    <li><a>Bosch</a></li>
+                                    <li><a>Morphy Richards</a></li>
+                                    <li><a>LG</a></li>
+                                </ul>
+                            </li>
 				    	    <li><a>Toasters</a></li>
 				    	    <li><a>Blenders</a></li>
 				    	</ul>
@@ -111,6 +164,7 @@
 	    	    <li><a>Automotive</a></li>
 	    	</ul>
     	</nav>
+        <h1>hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world </h1>
     	<script src="hover-intent.js"></script>
     </body>
 </html>
